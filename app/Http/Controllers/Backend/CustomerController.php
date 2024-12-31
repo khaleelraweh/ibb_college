@@ -71,7 +71,7 @@ class CustomerController extends Controller
             $img = $manager->read($request->file('user_image'));
             // $img = $img->resize(370, 246);
 
-            $img->toJpeg(80)->save(base_path('public/assets/customers/' . $file_name));
+            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/customers/' . $file_name));
 
             // $path = public_path('assets/customers/' . $file_name);
 
@@ -138,7 +138,7 @@ class CustomerController extends Controller
             $img = $manager->read($request->file('user_image'));
             // $img = $img->resize(370, 246);
 
-            $img->toJpeg(80)->save(base_path('public/assets/customers/' . $file_name));
+            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/customers/' . $file_name));
 
             $input['user_image'] = $file_name;
         }

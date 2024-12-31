@@ -99,7 +99,7 @@ class NewsController extends Controller
                 $file_type = $image->getMimeType();
 
                 $img = $manager->read($image);
-                $img->save(base_path('public/assets/news/' . $file_name));
+                $img->save(base_path(env('APP_URL') . '/public/assets/news/' . $file_name));
 
                 $posts->photos()->create([
                     'file_name' => $file_name,
@@ -196,7 +196,7 @@ class NewsController extends Controller
                 $file_type = $image->getMimeType();
 
                 $img = $manager->read($image);
-                $img->save(base_path('public/assets/news/' . $file_name));
+                $img->save(base_path(env('APP_URL') . '/public/assets/news/' . $file_name));
 
                 $new->photos()->create([
                     'file_name' => $file_name,

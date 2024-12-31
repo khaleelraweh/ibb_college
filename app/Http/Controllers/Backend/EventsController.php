@@ -103,7 +103,7 @@ class EventsController extends Controller
                 $file_type = $image->getMimeType();
 
                 $img = $manager->read($image);
-                $img->save(base_path('public/assets/events/' . $file_name));
+                $img->save(base_path(env('APP_URL') . '/public/assets/events/' . $file_name));
 
                 $event->photos()->create([
                     'file_name' => $file_name,
@@ -208,7 +208,7 @@ class EventsController extends Controller
                 $file_type = $image->getMimeType();
 
                 $img = $manager->read($image);
-                $img->save(base_path('public/assets/events/' . $file_name));
+                $img->save(base_path(env('APP_URL') . '/public/assets/events/' . $file_name));
 
                 $event->photos()->create([
                     'file_name' => $file_name,

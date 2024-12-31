@@ -75,7 +75,7 @@ class StatisticsController extends Controller
             $manager = new ImageManager(new Driver());
             $file_name = 'album' . time() . '.' . $image->extension();
             $img = $manager->read($request->file('statistic_image'));
-            $img->toJpeg(80)->save(base_path('public/assets/statistics/' . $file_name));
+            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/statistics/' . $file_name));
             $input['statistic_image'] = $file_name;
         }
 
@@ -151,7 +151,7 @@ class StatisticsController extends Controller
             $manager = new ImageManager(new Driver());
             $file_name = 'statistics' . time() . '.' . $statisticImage->extension();
             $img = $manager->read($request->file('statistic_image'));
-            $img->toJpeg(80)->save(base_path('public/assets/statistics/' . $file_name));
+            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/statistics/' . $file_name));
             $input['statistic_image'] = $file_name;
         }
 

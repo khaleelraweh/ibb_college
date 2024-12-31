@@ -89,7 +89,7 @@ class TestimonialController extends Controller
 
             $img = $manager->read($request->file('image'));
 
-            $img->toJpeg(80)->save(base_path('public/assets/testimonials/' . $file_name));
+            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/testimonials/' . $file_name));
 
             $input['image'] = $file_name;
         }
@@ -180,7 +180,7 @@ class TestimonialController extends Controller
             $img = $manager->read($request->file('image'));
 
 
-            $img->toJpeg(80)->save(base_path('public/assets/testimonials/' . $file_name));
+            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/testimonials/' . $file_name));
 
             $input['image'] = $file_name;
         }
