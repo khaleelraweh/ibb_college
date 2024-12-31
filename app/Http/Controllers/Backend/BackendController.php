@@ -80,7 +80,7 @@ class BackendController extends Controller
             $manager = new ImageManager(new Driver());
             $file_name = $user->username . '.' . $image->extension();
             $img = $manager->read($request->file('user_image'));
-            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/users/' . $file_name));
+            $img->toJpeg(80)->save(base_path('public/assets/users/' . $file_name));
             $data['user_image'] = $file_name;
         }
 

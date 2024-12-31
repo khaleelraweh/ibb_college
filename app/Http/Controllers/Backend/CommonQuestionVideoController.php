@@ -68,7 +68,7 @@ class CommonQuestionVideoController extends Controller
 
             $img = $manager->read($request->file('question_video_image'));
 
-            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/common_question_videos/' . $file_name));
+            $img->toJpeg(80)->save(base_path('public/assets/common_question_videos/' . $file_name));
 
 
             $input['question_video_image'] = $file_name;
@@ -141,7 +141,7 @@ class CommonQuestionVideoController extends Controller
             $img = $manager->read($request->file('question_video_image'));
 
 
-            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/common_question_videos/' . $file_name));
+            $img->toJpeg(80)->save(base_path('public/assets/common_question_videos/' . $file_name));
 
             $input['question_video_image'] = $file_name;
         }

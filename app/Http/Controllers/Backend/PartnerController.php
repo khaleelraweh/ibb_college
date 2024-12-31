@@ -89,7 +89,7 @@ class PartnerController extends Controller
             $manager        = new ImageManager(new Driver());
             $file_name      =   auth()->user()->id . '_partner_' . time() . '.' . $partner_image->extension();
             $img            = $manager->read($request->file('partner_image'));
-            $img->save(base_path(env('APP_URL') . '/public/assets/partners/' . $file_name));
+            $img->save(base_path('public/assets/partners/' . $file_name));
             $input['partner_image'] = $file_name;
         }
 
@@ -166,7 +166,7 @@ class PartnerController extends Controller
             $manager = new ImageManager(new Driver());
             $file_name = Str::slug($request->username) . '_' . time() .  "." . $image->getClientOriginalExtension();
             $img = $manager->read($request->file('partner_image'));
-            $img->save(base_path(env('APP_URL') . '/public/assets/partners/' . $file_name));
+            $img->save(base_path('public/assets/partners/' . $file_name));
 
             $input['partner_image'] = $file_name;
         }

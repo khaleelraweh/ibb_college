@@ -90,7 +90,7 @@ class PresidentSpeechController extends Controller
 
             $img = $manager->read($request->file('promotional_image'));
 
-            $img->save(base_path(env('APP_URL') . '/public/assets/president_speeches/' . $file_name));
+            $img->save(base_path('public/assets/president_speeches/' . $file_name));
 
             $input['promotional_image'] = $file_name;
         }
@@ -179,7 +179,7 @@ class PresidentSpeechController extends Controller
 
             $img = $manager->read($request->file('promotional_image'));
 
-            $img->save(base_path(env('APP_URL') . '/public/assets/president_speeches/' . $file_name));
+            $img->save(base_path('public/assets/president_speeches/' . $file_name));
 
             $input['promotional_image'] = $file_name;
         }

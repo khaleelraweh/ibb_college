@@ -51,7 +51,7 @@ class SiteSettingsController extends Controller
                 $file_type = $image->getMimeType();
 
                 $img = $manager->read($image);
-                $img->save(base_path(env('APP_URL') . '/public/assets/site_settings/' . $file_name));
+                $img->save(base_path('public/assets/site_settings/' . $file_name));
 
                 // Create and associate the Photo instance
                 $siteAlbum = SiteSetting::find($id); // Assuming the ID relates to the SiteSetting instance
@@ -85,7 +85,7 @@ class SiteSettingsController extends Controller
 
             $img = $manager->read($request->file('site_img'));
 
-            $img->save(base_path(env('APP_URL') . '/public/assets/site_settings/' . $file_name));
+            $img->save(base_path('public/assets/site_settings/' . $file_name));
 
             $site_image->update([
                 'value' => $file_name
@@ -109,7 +109,7 @@ class SiteSettingsController extends Controller
 
             $img = $manager->read($request->file('site_logo_large_light'));
 
-            $img->save(base_path(env('APP_URL') . '/public/assets/site_settings/' . $file_name));
+            $img->save(base_path('public/assets/site_settings/' . $file_name));
 
             $site_logo_large_light->update([
                 'value' => $file_name
@@ -134,7 +134,7 @@ class SiteSettingsController extends Controller
 
             $img = $manager->read($request->file('site_logo_small_light'));
 
-            $img->save(base_path(env('APP_URL') . '/public/assets/site_settings/' . $file_name));
+            $img->save(base_path('public/assets/site_settings/' . $file_name));
 
             $site_logo_small_light->update([
                 'value' => $file_name
@@ -160,7 +160,7 @@ class SiteSettingsController extends Controller
 
             $img = $manager->read($request->file('site_logo_large_dark'));
 
-            $img->save(base_path(env('APP_URL') . '/public/assets/site_settings/' . $file_name));
+            $img->save(base_path('public/assets/site_settings/' . $file_name));
 
             $site_logo_large_dark->update([
                 'value' => $file_name
@@ -184,7 +184,7 @@ class SiteSettingsController extends Controller
 
             $img = $manager->read($request->file('site_logo_small_dark'));
 
-            $img->save(base_path(env('APP_URL') . '/public/assets/site_settings/' . $file_name));
+            $img->save(base_path('public/assets/site_settings/' . $file_name));
 
             $site_logo_small_dark->update([
                 'value' => $file_name

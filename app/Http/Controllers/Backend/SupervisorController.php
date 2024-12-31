@@ -73,7 +73,7 @@ class SupervisorController extends Controller
             $file_name = Str::slug($request->username) . '_' . time() .  "." . $image->getClientOriginalExtension();
             $img = $manager->read($request->file('user_image'));
             // $img = $img->resize(370, 246);
-            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/users/' . $file_name));
+            $img->toJpeg(80)->save(base_path('public/assets/users/' . $file_name));
 
 
             $input['user_image'] = $file_name;
@@ -149,7 +149,7 @@ class SupervisorController extends Controller
             $file_name = Str::slug($request->username) . '_' . time() .  "." . $image->getClientOriginalExtension();
             $img = $manager->read($request->file('user_image'));
             // $img = $img->resize(370, 246);
-            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/users/' . $file_name));
+            $img->toJpeg(80)->save(base_path('public/assets/users/' . $file_name));
 
 
             $input['user_image'] = $file_name;

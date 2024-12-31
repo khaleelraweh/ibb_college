@@ -62,7 +62,7 @@ class SiteSettingsController extends Controller
             $img = $manager->read($request->file('site_img'));
             // $img = $img->resize(370, 246);
 
-            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/site_settings/' . $file_name));
+            $img->toJpeg(80)->save(base_path('public/assets/site_settings/' . $file_name));
 
             $site_image->update([
                 'value' => $file_name

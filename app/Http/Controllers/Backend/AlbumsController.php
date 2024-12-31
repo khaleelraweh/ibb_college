@@ -84,7 +84,7 @@ class AlbumsController extends Controller
             $manager = new ImageManager(new Driver());
             $file_name = 'album' . time() . '.' . $image->extension();
             $img = $manager->read($request->file('album_profile'));
-            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/albums/' . $file_name));
+            $img->toJpeg(80)->save(base_path('public/assets/albums/' . $file_name));
             $input['album_profile'] = $file_name;
         }
 
@@ -104,7 +104,7 @@ class AlbumsController extends Controller
                 $file_type = $image->getMimeType();
 
                 $img = $manager->read($image);
-                $img->save(base_path(env('APP_URL') . '/public/assets/albums/' . $file_name));
+                $img->save(base_path('public/assets/albums/' . $file_name));
 
                 $album->photos()->create([
                     'file_name' => $file_name,
@@ -199,7 +199,7 @@ class AlbumsController extends Controller
             $manager = new ImageManager(new Driver());
             $file_name = 'album' . time() . '.' . $albumImage->extension();
             $img = $manager->read($request->file('album_profile'));
-            $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/albums/' . $file_name));
+            $img->toJpeg(80)->save(base_path('public/assets/albums/' . $file_name));
             $input['album_profile'] = $file_name;
         }
 
@@ -222,7 +222,7 @@ class AlbumsController extends Controller
                 $file_type = $image->getMimeType();
 
                 $img = $manager->read($image);
-                $img->save(base_path(env('APP_URL') . '/public/assets/albums/' . $file_name));
+                $img->save(base_path('public/assets/albums/' . $file_name));
 
                 $album->photos()->create([
                     'file_name' => $file_name,

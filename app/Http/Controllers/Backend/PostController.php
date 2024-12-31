@@ -97,7 +97,7 @@ class PostController extends Controller
                 $file_type = $image->getMimeType();
 
                 $img = $manager->read($image);
-                $img->save(base_path(env('APP_URL') . '/public/assets/posts/' . $file_name));
+                $img->save(base_path('public/assets/posts/' . $file_name));
 
                 $posts->photos()->create([
                     'file_name' => $file_name,
@@ -193,7 +193,7 @@ class PostController extends Controller
                 $file_type = $image->getMimeType();
 
                 $img = $manager->read($image);
-                $img->save(base_path(env('APP_URL') . '/public/assets/posts/' . $file_name));
+                $img->save(base_path('public/assets/posts/' . $file_name));
 
                 $post->photos()->create([
                     'file_name' => $file_name,

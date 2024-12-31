@@ -113,8 +113,8 @@ class MainSliderController extends Controller
                 $img = $manager->read($image);
                 // $img->resize(370, 246);
                 // Save the image to the desired location
-                $img->save(base_path(env('APP_URL') . '/public/assets/main_sliders/' . $file_name));
-                // $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/main_sliders/' . $file_name));
+                $img->save(base_path('public/assets/main_sliders/' . $file_name));
+                // $img->toJpeg(80)->save(base_path('public/assets/main_sliders/' . $file_name));
 
                 $mainSlider->photos()->create([
                     'file_name' => $file_name,
@@ -223,8 +223,8 @@ class MainSliderController extends Controller
                 $img = $manager->read($image);
                 // $img->resize(370, 246);
                 // Save the image to the desired location
-                $img->save(base_path(env('APP_URL') . '/public/assets/main_sliders/' . $file_name));
-                // $img->toJpeg(80)->save(base_path(env('APP_URL') . '/public/assets/main_sliders/' . $file_name));
+                $img->save(base_path('public/assets/main_sliders/' . $file_name));
+                // $img->toJpeg(80)->save(base_path('public/assets/main_sliders/' . $file_name));
 
                 $mainSlider->photos()->create([
                     'file_name' => $file_name,

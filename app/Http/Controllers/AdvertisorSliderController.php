@@ -92,7 +92,7 @@ class AdvertisorSliderController extends Controller
                 $file_type = $image->getMimeType();
 
                 $img = $manager->read($image);
-                $img->save(base_path(env('APP_URL') . '/public/assets/advertisor_sliders/' . $file_name));
+                $img->save(base_path('public/assets/advertisor_sliders/' . $file_name));
 
                 $advertisorSlider->photos()->create([
                     'file_name' => $file_name,
@@ -183,7 +183,7 @@ class AdvertisorSliderController extends Controller
                 $file_type = $image->getMimeType();
 
                 $img = $manager->read($image);
-                $img->save(base_path(env('APP_URL') . '/public/assets/advertisor_sliders/' . $file_name));
+                $img->save(base_path('public/assets/advertisor_sliders/' . $file_name));
 
                 $advertisorSlider->photos()->create([
                     'file_name' => $file_name,
